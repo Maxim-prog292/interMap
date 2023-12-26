@@ -1,0 +1,1241 @@
+@font-face {
+  font-family: "DrukCyr";
+  src: url(./fonts/drukcyr-medium.ttf);
+}
+@font-face {
+  font-family: "Miama";
+  src: url(./fonts/Miama.ttf);
+}
+@font-face {
+  font-family: "Gropled-Bold";
+  src: url(./fonts/Gropled-Bold.otf);
+}
+@font-face {
+  font-family: "InterExtraLight";
+  src: url(./fonts/Inter-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "InterLight";
+  src: url(./fonts/Inter-Light.ttf);
+}
+@font-face {
+  font-family: "InterRegular";
+  src: url(./fonts/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "Circe";
+  src: url(./fonts/circe/circe_extrabold.ttf);
+}
+@font-face {
+  font-family: "CirceBold";
+  src: url(./fonts/circe/circe_extrabold.ttf);
+}
+h1 {
+  font-weight: 200;
+
+  text-transform: uppercase;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+}
+p {
+  margin-bottom: 0 !important;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-image: url(./img/region/tver_region.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  backdrop-filter: blur(5px);
+  animation: color 60s infinite;
+  overflow: hidden;
+  -ms-user-select: none; 
+		-moz-user-select: none; 
+		-webkit-user-select: none; 
+		user-select: none; 
+    
+}
+#reload {
+  position: absolute;
+  top: 90%;
+  left: 94.5%;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.25);
+  /* filter: blur(1px); */
+  backdrop-filter: blur(7.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000000;
+}
+#reload_image {
+  width: 70px;
+}
+@keyframes color {
+  0% {
+    background-image: url(./img/region/tver_region.svg);
+  }
+  5% {
+    background-image: url(./img/geraldika/bejeck.png);
+  }
+  10% {
+    background-image: url(./img/geraldika/belskiy.png);
+  }
+  15% {
+    background-image: url(./img/geraldika/bologovskiy.png);
+  }
+  20% {
+    background-image: url(./img/geraldika/firovskiy.png);
+  }
+  25% {
+    background-image: url(./img/geraldika/jarovskiy.png);
+  }
+  30% {
+    background-image: url(./img/geraldika/kalininskiy.png);
+  }
+  35% {
+    background-image: url(./img/geraldika/kalyazin.png);
+  }
+  40% {
+    background-image: url(./img/geraldika/kashin.png);
+  }
+  45% {
+    background-image: url(./img/geraldika/kesgor.png);
+  }
+  50% {
+    background-image: url(./img/geraldika/kholm.png);
+  }
+  55% {
+    background-image: url(./img/geraldika/kimri.png);
+  }
+  60% {
+    background-image: url(./img/geraldika/konakovskiy.png);
+  }
+  65% {
+    background-image: url(./img/geraldika/kuvshinovskiy.png);
+  }
+  70% {
+    background-image: url(./img/geraldika/lesnoi.png);
+  }
+  75% {
+    background-image: url(./img/geraldika/lihoslavl.png);
+  }
+  80% {
+    background-image: url(./img/geraldika/maksatiha.png);
+  }
+  85% {
+    background-image: url(./img/geraldika/molokovo.png);
+  }
+  90% {
+    background-image: url(./img/geraldika/nelidovskiy.png);
+  }
+  95% {
+    background-image: url(./img/geraldika/oleninskiy.png);
+  }
+  100% {
+    background-image: url(./img/geraldika/ostashkovskiy.png);
+  }
+}
+
+.open_region {
+  position: relative;
+  top: 80px;
+  left: calc(100% / 2 - 150px);
+  width: 950px;
+  height: 950px;
+  margin-right: 100px;
+  cursor: pointer;
+  z-index: 10;
+}
+.monuments_region {
+  position: absolute;
+  width: 950px;
+  height: 950px;
+  z-index: 10;
+}
+.derevo {
+  position: absolute;
+  width: 5px;
+}
+#regionIMG {
+  width: 950px;
+  height: 950px;
+}
+#main_screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ABOUT EXPO */
+
+.about_expo,
+.about_vorobiov {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: calc(100% - 80px);
+  left: calc(100% / 2 - 220px);
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid #dedede;
+  background: rgb(255, 255, 255, 0.85);
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  /* backdrop-filter: blur(10.5px); */
+  overflow-y: scroll;
+  z-index: 15;
+  cursor: pointer;
+}
+.about_vorobiov {
+  position: absolute;
+  top: calc(100% - 80px);
+  left: calc(100% / 2 + 20px);
+}
+.about_head {
+  font-size: 20px;
+  font-family: "Gropled-Bold";
+  text-align: center;
+  margin-top: 13px;
+}
+.about_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.about_content p {
+  font-family: "Gropled-Bold";
+}
+.about_content_head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about_content_head h1 {
+  font-family: "Circe";
+  font-size: 30px;
+}
+.about_content_head h2 {
+  font-size: 20px;
+}
+.about_content_expo_info {
+  margin: 180px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.about_content_expo_info-image {
+  box-shadow: 1px 1px 15px -2px rgba(0, 0, 0, 0.85);
+}
+.gerb_info {
+  width: 14%;
+  float: left;
+  margin-right: 30px;
+  box-shadow: none;
+}
+.img_info1,
+.img_info2 {
+  width: 30%;
+  float: left;
+  margin: 30px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  border-radius: 14px;
+}
+.img_info2 {
+  float: right;
+  margin-left: 30px;
+}
+.description_expo {
+  font-size: 32px;
+  text-align: justify;
+}
+.close_button_about,
+.close_button_about_voro {
+  position: absolute;
+  top: 10px;
+  left: 1784px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.25);
+  /* filter: blur(1px); */
+  backdrop-filter: blur(7.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close_button_about img,
+.close_button_about_voro img {
+  width: 32px;
+  z-index: 1000;
+  cursor: pointer;
+}
+.about_open h1 {
+  font-size: 34px;
+}
+.about_expo:active,
+.about_vorobiov:active {
+  box-shadow: 3px 3px 18px -2px rgba(0, 0, 0, 0.25);
+  scale: 1.005;
+}
+.about_expo::-webkit-scrollbar {
+  width: 60px;
+  background-color: #d8d8d8;
+  border-radius: 12px;
+  opacity: 0.5;
+}
+.about_expo::-webkit-scrollbar-thumb {
+  width: 60px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+}
+.about_vorobiov::-webkit-scrollbar {
+  width: 60px;
+  background-color: #d8d8d8;
+  border-radius: 12px;
+  opacity: 0.5;
+}
+.about_vorobiov::-webkit-scrollbar-thumb {
+  width: 60px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+}
+.about_close_expo {
+  transition: all 0.5ms;
+  animation: aniCloseExpo 0.4s forwards;
+}
+.about_open_expo {
+  transition: all 0.5ms;
+  animation: aniOpenExpo 0.5s forwards;
+  padding: 10px;
+}
+.about_close_vorobiov {
+  transition: all 0.5ms;
+  animation: aniCloseVorobiov 0.4s forwards;
+}
+.about_open_vorobiov {
+  transition: all 0.5ms;
+  animation: aniOpenVorobiov 0.5s forwards;
+  padding: 10px;
+}
+
+.hideAbout {
+  animation: hideA 0.2s linear 0s 1 normal both;
+}
+@keyframes hideA {
+  0% {
+    top: calc(100% - 80px);
+  }
+  100% {
+    top: calc(100% + 80px);
+  }
+}
+/* открытие about про выставку */
+@keyframes aniOpenExpo {
+  0% {
+    width: 200px;
+    height: 50px;
+    top: calc(100% - 80px);
+    left: calc(100% / 2 - 220px);
+    background: rgb(255, 255, 255, 0.65);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 98%;
+    cursor: auto;
+    background: rgb(255, 255, 255, 0.95);
+    margin: 10px;
+  }
+}
+@keyframes aniCloseExpo {
+  0% {
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 98%;
+    cursor: auto;
+    background: rgb(255, 255, 255, 0.95);
+  }
+  100% {
+    width: 200px;
+    height: 50px;
+    top: calc(100% - 80px);
+    left: calc(100% / 2 - 220px);
+    background: rgb(255, 255, 255, 0.65);
+  }
+}
+/* открытие about про выставку */
+/* открытие about про воробьева */
+@keyframes aniOpenVorobiov {
+  0% {
+    width: 200px;
+    height: 50px;
+    top: calc(100% - 80px);
+    left: calc(100% / 2 + 20px);
+    background: rgb(255, 255, 255, 0.65);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 98%;
+    cursor: auto;
+    background: rgb(255, 255, 255, 0.95);
+    margin: 10px;
+  }
+}
+@keyframes aniCloseVorobiov {
+  0% {
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 98%;
+    cursor: auto;
+    background: rgb(255, 255, 255, 0.95);
+  }
+  100% {
+    width: 200px;
+    height: 50px;
+    top: calc(100% - 80px);
+    left: calc(100% / 2 + 20px);
+    background: rgb(255, 255, 255, 0.65);
+  }
+}
+/* открытие about про воробьева */
+
+/* ABOUT EXPO */
+
+.main_heading {
+  width: 98.5%;
+  position: absolute;
+  left: calc(98.5% / 2 - 48.5%);
+  top: 70px;
+  color: #C2AC6C;
+  text-align: center;
+  font-family: Gropled-Bold;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  z-index: 0;
+}
+.main_heading h1{
+  background: none;
+  border-radius: 5px;
+}
+
+.button_start_back {
+  position: absolute;
+  left: calc(50% - 150px);
+  top: calc(50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 11;
+  cursor: pointer;
+}
+
+.button_start {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  z-index: 11;
+  cursor: pointer;
+}
+.button_start p {
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+  font-family: Gropled-Bold;
+  font-size: 58px;
+  font-style: normal;
+  line-height: normal;
+}
+
+svg {
+  width: 1920px;
+  position: absolute;
+  top: 80px;
+}
+.open_region_city-svg {
+  width: 800px;
+  height: 800px;
+  top: 0;
+  position: absolute;
+  z-index: 1000;
+}
+
+path {
+  fill: rgba(255, 255, 255, 0.85);
+  /* filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1)); */
+  /* filter: blur(3px); */
+  stroke: #dedede;
+}
+path.forest {
+  fill: rgba(63, 138, 20, 0.85);
+  stroke: none;
+}
+path:hover {
+  fill: rgba(209, 209, 209, 0.85);
+  transition: 0.5s;
+}
+path:active {
+  fill: rgba(209, 209, 209, 0.85);
+  transition: 0.2s;
+}
+.active_path {
+  fill: rgba(209, 209, 209, 0.75);
+}
+
+.popup {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 3px;
+  background: rgb(255, 255, 255, 0.95);
+  border-radius: 6px;
+  display: none;
+  z-index: 10000;
+  transition: 0.1s;
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7.5px);
+  border: 1px solid #dedede;
+  font-family: Gropled-Bold;
+}
+
+/* INFO BLOCK MONUMENTS */
+
+.info_block_monument {
+  width: 1900px;
+  height: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  margin: 10px;
+  
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid #dedede;
+  background: rgb(255, 255, 255, 0.95);
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8.5px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1000002;
+  animation: ModalAnim 2s ease 0s 1 normal forwards;
+}
+.info_block_monument h1 {
+  text-align: center;
+  font-size: 62px;
+  font-family: "Gropled-Bold";
+  color: #C2AC6C;
+}
+.info_block_monument .mainImageBlock {
+  text-align: center;
+  
+}
+.image_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 50px 0;
+}
+.info_block_monument .mainImage {
+  width: 750px;
+  border: 10px ridge rgb(255, 255, 255);
+  box-shadow: 1px 1px 15px -2px rgba(0, 0, 0, 0.85);
+  border-radius: 14px;
+
+}
+.info_block_monument .description_monument {
+  text-align: justify;
+  font-size: 28px;
+  line-height: 1.8;
+  font-family: "InterRegular";
+}
+.close_info_block_monument {
+  position: absolute;
+  top: 10px;
+  left: 1783px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.25);
+  /* filter: blur(1px); */
+  backdrop-filter: blur(7.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close_info_block_img {
+  width: 32px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* INFO BLOCK MONUMENTS */
+
+.modal_fullscreen {
+  width: 1900px;
+  height: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  margin: 10px;
+  font-family: "Gropled-Bold";
+  box-sizing: border-box;
+  border-radius: 7px;
+  border: 1px solid #dedede;
+  background: rgb(255, 255, 255, 0.95);
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8.5px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 12;
+  animation: ModalAnim 2s ease 0s 1 normal forwards;
+}
+.modal_content {
+  display: flex;
+  flex-direction: column;
+}
+.modal_image {
+  width: 50%;
+  text-align: center;
+    margin: 30px auto;
+    border-radius: 14px;
+}
+.ramka {
+    box-shadow: 1px 1px 15px -2px rgba(0, 0, 0, 0.85);
+    display: block;
+    border: 10px ridge rgb(255, 255, 255);
+}
+.modal_content_heading {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 64px;
+  font-family: Gropled-Bold;
+  color: #C2AC6C;
+}
+.modal_text {
+  font-size: 24px;
+  text-align: justify;
+  line-height: 40px;
+  font-family: InterRegular;
+}
+.close {
+  display: none;
+}
+.modal_fullscreen::-webkit-scrollbar, .info_block_monument::-webkit-scrollbar {
+  width: 60px;
+  background-color: #d8d8d8;
+  border-radius: 7px;
+  opacity: 0.5;
+}
+.modal_fullscreen::-webkit-scrollbar-thumb, .info_block_monument::-webkit-scrollbar-thumb {
+  width: 60px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+}
+.close_button_modal_fullscreen {
+  position: absolute;
+  top: 10px;
+  left: 1784px;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.25);
+  /* filter: blur(1px); */
+  backdrop-filter: blur(7.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close_button_modal_fullscreen_image {
+  width: 32px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: absolute;
+  top: 60px;
+  left: -560px;
+  width: 560px;
+  height: 92%;
+  padding: 15px;
+  margin: 15px;
+  padding-top: 50px;
+  z-index: 1000;
+  box-sizing: border-box;
+  border-radius: 7px 7px 7px 7px;
+  border: 1px solid #dedede;
+
+  background: rgb(255, 255, 255);
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+  /* filter: blur(1px); */
+  backdrop-filter: blur(7.5px);
+  opacity: 0;
+  position: absolute;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  z-index: 2
+  ;
+}
+/* .sidebar::-webkit-scrollbar {
+  width: 6px;
+  background-color: #d8d8d8;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+} */
+.close_button_sidebar {
+  position: fixed;
+  top: 8px;
+  left: 485px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.25);
+  /* filter: blur(1px); */
+  backdrop-filter: blur(7.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close_button_sidebar img {
+  width: 32px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* контент */
+.sidebar_content_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* background-color: #000; */
+  padding: 10px;
+  box-sizing: border-box;
+}
+.sidebar_content_title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-family: Gropled-Bold;
+}
+.sidebar_content_description {
+  text-align: justify;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: InterRegular;
+}
+.sidebar_content_header_block {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 7px;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.25);
+  /* filter: blur(1px); */
+  backdrop-filter: blur(7.5px);
+}
+.sidebar_content_img {
+  width: 20%;
+}
+
+.sidebar_content_about {
+  width: 100%;
+  height: 70px;
+  border: 1px solid #aaa;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-family: "InterLight";
+  border-radius: 7px;
+  border: 1px solid #dedede;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.25);
+  /* filter: blur(1px); */
+  backdrop-filter: blur(7.5px);
+  cursor: pointer;
+}
+.sidebar_content_about:active {
+  box-shadow: 3px 3px 18px -2px rgba(0, 0, 0, 0.25);
+  scale: 1.005;
+}
+
+.sidebar_content_blocks_title {
+  font-weight: 600;
+  font-family: Gropled-Bold;
+}
+.sidebar_content_blocks_description {
+  margin-top: 15px;
+}
+
+/* контент */
+
+/* анимация появления сайдбара */
+.showSidebar {
+  animation: showSidebar 1s ease 0s 1 normal forwards;
+}
+
+@keyframes showSidebar {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0.85;
+    transform: translateX(560px);
+  }
+}
+
+/* анимация появления сайдбара */
+
+/* анимация скрытия сайдбара */
+.closeSidebar {
+  animation: closeSidebar 1s ease 0s 1 normal forwards;
+}
+
+@keyframes closeSidebar {
+  0% {
+    opacity: 0.85;
+    transform: translateX(560px);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
+/* анимация скрытия сайдбара */
+
+/* анимации кнопки "начать" */
+
+.animation_button_hover {
+  animation: hoverAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes hoverAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+.animation_button_unhover {
+  animation: unhoverAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes unhoverAnim {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.pulse_anim {
+  animation: pulseAnim 4s ease 1s infinite normal forwards;
+}
+@keyframes pulseAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+/* анимации кнопки "начать" */
+
+/* анимация скрытия */
+.hide_animation {
+  animation: hideAnim 1s ease 0s normal forwards;
+}
+@keyframes hideAnim {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* анимация скрытия */
+
+/* анимация появления */
+/* .show_animation {
+  animation: showAnim 2s ease 0s normal forwards;
+}
+@keyframes showAnim {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+/* анимация появления */
+
+/* скрытие текста  */
+.hide_text {
+  animation: textMoveToTopAnim 1s ease 0s normal forwards;
+}
+@keyframes textMoveToTopAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* сдвиг текста  */
+
+/* появление текста свверху */
+.show_text_top {
+  animation: showTextTop 1s ease 0s normal forwards;
+}
+@keyframes showTextTop {
+  0% {
+    font-size: 58px;
+    position: absolute;
+    top: -100px;
+  }
+  100% {
+    z-index: 1;
+    border-radius: 7px;
+    border: 1px solid #dedede;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 4px 4px 14px -2px rgba(0, 0, 0, 0.25);
+    /* filter: blur(1px); */
+    backdrop-filter: blur(7.5px);
+    font-size: 58px;
+    position: absolute;
+    top: 5px;
+    opacity: 1;
+    box-sizing: border-box;
+  }
+}
+/* сдвиг текста вверх */
+
+/* класс для скрытия */
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.show_flex {
+  display: flex;
+}
+/* класс для скрытия */
+
+/* исчезание карты */
+.map_opacity {
+  animation: mapMoveAnim 1s ease 0s normal forwards;
+}
+@keyframes mapMoveAnim {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+  }
+}
+/* исчезание карты */
+
+/* появление карты */
+.map_opacity_remove {
+  animation: mapMoveremoveAnim 1s ease 0s normal forwards;
+}
+@keyframes mapMoveremoveAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 9999;
+  }
+}
+/* появление карты */
+
+/* исчезание региона */
+.region_opacity {
+  animation: mapMoveAnim 1.5s ease 0s normal forwards;
+}
+@keyframes mapMoveAnim {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+/* исчезание карты */
+
+/* появление региона */
+.region_opacity_remove {
+  animation: mapMoveremoveAnim 1.5s ease 0s normal forwards;
+}
+@keyframes mapMoveremoveAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 11;
+  }
+}
+/* появление карты */
+
+@keyframes modalAnim {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+img.cloud {
+  position: absolute;
+  opacity: 40%;
+  z-index: 12;
+  pointer-events: none;
+}
+
+img.cloud-1 {
+  width: 15%;
+  top: -100px;
+  left: -100px;
+  animation: cloud-1 80s linear 0s infinite;
+}
+@keyframes cloud-1 {
+  0% {
+    top: -100px;
+    left: -100px;
+  }
+  100% {
+    top: 100%;
+    left: 120%;
+  }
+}
+img.cloud-2 {
+  width: 10%;
+  top: 200px;
+  left: -150px;
+  animation: cloud-2 80s linear 0s infinite;
+}
+@keyframes cloud-2 {
+  0% {
+    top: 200px;
+    left: -150px;
+  }
+  100% {
+    top: 100%;
+    left: 80%;
+  }
+}
+img.cloud-3 {
+  width: 20%;
+  top: -100px;
+  left: 300px;
+  animation: cloud-3 80s linear 0s infinite;
+}
+@keyframes cloud-3 {
+  0% {
+    top: -100px;
+    left: 300px;
+  }
+  100% {
+    top: 100%;
+    left: 160%;
+  }
+}
+img.cloud-4 {
+  width: 25%;
+  top: 100px;
+  left: -180px;
+  animation: cloud-4 80s linear 0s infinite;
+}
+@keyframes cloud-4 {
+  0% {
+    top: 600px;
+    left: -180px;
+  }
+  100% {
+    top: 100%;
+    left: 60%;
+  }
+}
+.main_heading .hide_text .show_text_top h1 {
+  margin-top: 15px !important;
+  margin-bottom: 0 !important;
+}
+.cards_monument_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+.card_monument {
+  width: 400px;
+  min-height: 50px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  padding: 10px;
+  border: 1px solid #dedede;
+  margin: 3px;
+  background: rgb(255, 255, 255);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7.5px);
+  font-family: InterRegular;
+}
+.card_title {
+  margin-bottom: 5px;
+  font-family: InterRegular;
+}
+.active_monument {
+  width: 600px;
+  min-height: 100px;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 600px/2);
+  z-index: 30;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 10px 15px 5px rgba(107, 107, 107, 0.55);
+}
+.active_monument .card_title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: InterRegular;
+}
+.active_monument .card_description {
+  overflow:visible;
+  min-height: 200px;
+  font-size: 28px;
+  margin: 20px;
+  font-family: InterRegular;
+  background: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility:hidden;
+  background-color: #aaa;
+  z-index: 20;
+}
+.active_overlay {
+  opacity: 60%;
+  visibility:visible;
+}
+.blur {
+  backdrop-filter: blur(5px);
+}
+.monumentItem {
+  z-index: 10000000;
+    position: relative;
+    width: 55px;
+    top: 430px;
+    left: 530px;
+}
+
+.hide {
+  visibility: hidden;
+}
