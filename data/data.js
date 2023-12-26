@@ -3977,6 +3977,3 @@ export const dataRegion = [
     ],
   },
 ];
-
-  },
-];
