@@ -1,6 +1,6 @@
 let activeRegion;
 export { activeRegion };
-import {dataRegion} from '../data/data.js';
+import { dataRegion } from "../data/data.js";
 
 document.addEventListener("DOMContentLoaded", (elem) => {
   elem.preventDefault();
@@ -9,12 +9,10 @@ document.addEventListener("DOMContentLoaded", (elem) => {
   const map = document.querySelector("#map_inter");
   const rayons = document.querySelectorAll("path");
   const exitRegionMode = document.querySelector(".close_button_sidebar");
-  const monumentsRegion = document.querySelector('.monuments_region');
-
+  const monumentsRegion = document.querySelector(".monuments_region");
 
   let image;
 
-  
   const arrayRegionImageSRC = [
     "kholm",
     "molokovo",
@@ -52,7 +50,7 @@ document.addEventListener("DOMContentLoaded", (elem) => {
     "jarovskiy",
     "zapadnodvinskiy",
     "toropeckiy",
-    "tver"
+    "tver",
   ];
 
   rayons.forEach((elem) =>
@@ -72,7 +70,7 @@ document.addEventListener("DOMContentLoaded", (elem) => {
       activeRegion = classValue;
       showRegionElement();
       openRegion.appendChild(image);
-      showMonuments(activeRegion)
+      showMonuments(activeRegion);
     }
   }
 
@@ -97,35 +95,35 @@ document.addEventListener("DOMContentLoaded", (elem) => {
   }
 
   function showMonuments(activeRegion) {
-        dataRegion.forEach(element => {
-            if(element.id == activeRegion) {
-
-                element.monumentsInMap.forEach(elem => {
-                  let monument = document.createElement('img');
-                  if (elem.id == 'city') {
-                    monument.setAttribute('src', "../img/monuments/city.png");
-                  } else {
-                    monument.setAttribute('src', "../img/monuments/dostoprimechatelinosti.png");
-                  }
-                    monument.setAttribute('id', elem.id)
-                    monument.classList.add('monumentItem');
-                    monument.style = `top: ${elem.x}px; left: ${elem.y}px`;
-                    monumentsRegion.appendChild(monument);
-                })
-            }
-        })
+    dataRegion.forEach((element) => {
+      if (element.id == activeRegion) {
+        element.monumentsInMap.forEach((elem) => {
+          let monument = document.createElement("img");
+          if (elem.id == "city") {
+            monument.setAttribute("src", "./img/monuments/city.png");
+          } else {
+            monument.setAttribute(
+              "src",
+              "./img/monuments/dostoprimechatelinosti.png"
+            );
+          }
+          monument.setAttribute("id", elem.id);
+          monument.classList.add("monumentItem");
+          monument.style = `top: ${elem.x}px; left: ${elem.y}px`;
+          monumentsRegion.appendChild(monument);
+        });
+      }
+    });
   }
 
   function deleteMonuments() {
-    const monumentItems = monumentsRegion.querySelectorAll('.monumentItem');
-    monumentItems.forEach(elem => {
-        monumentsRegion.removeChild(elem);
-    })
-    
+    const monumentItems = monumentsRegion.querySelectorAll(".monumentItem");
+    monumentItems.forEach((elem) => {
+      monumentsRegion.removeChild(elem);
+    });
   }
-  function changeEmbient() {
-
-  }
+  function changeEmbient() {}
 });
+
 
 
